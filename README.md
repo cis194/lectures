@@ -23,3 +23,8 @@
  - [LYAH: Monoids](http://learnyouahaskell.com/functors-applicative-functors-and-monoids#monoids)
  - [LYAH: deriving instances](http://learnyouahaskell.com/making-our-own-types-and-typeclasses#derived-instances)
  - [RWH: typeclasses](http://book.realworldhaskell.org/read/using-typeclasses.html)
+
+### lec5: QuickCheck
+ - [Code from lecture](https://github.com/cis194/lectures/blob/master/Lec6.hs)
+ - [Computerphile video](https://youtu.be/AfaNEebCDos)
+ - [RWH: QuickCheck](http://book.realworldhaskell.org/read/testing-and-quality-assurance.html)
