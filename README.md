@@ -28,3 +28,11 @@
  - [Code from lecture](https://github.com/cis194/lectures/blob/master/Lec6.hs)
  - [Computerphile video](https://youtu.be/AfaNEebCDos)
  - [RWH: QuickCheck](http://book.realworldhaskell.org/read/testing-and-quality-assurance.html)
+
+### lec7: Monads
+ - [Slides](https://github.com/cis194/lectures/blob/master/07_monads.pdf)
+ - [Code from lecture](https://github.com/cis194/lectures/blob/master/Lec7.hs)
+
+### lec8: Lots and lots of Monad instances
+ - [Code from lecture](https://github.com/cis194/lectures/blob/master/Lec8.hs)
+ - [LYAH: common monad instances](http://learnyouahaskell.com/for-a-few-monads-more)
