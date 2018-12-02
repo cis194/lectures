@@ -18,15 +18,15 @@ qempty = ([], [])
 qpush :: a -> Queue a -> Queue a
 qpush x (ins, outs) = (x : ins, outs)
 
-qpop :: Queue a -> Maybe (a, Queue a)
-qpop ([], [])      = Nothing
+qpop :: Queue a -> (Maybe a, Queue a)
+qpop ([], [])      = (Nothing, ([], []))
 qpop (ins, [])     = qpop ([], reverse ins)
-qpop (ins, x:outs) = Just (x, (ins, outs))
+qpop (ins, x:outs) = (Just x, (ins, outs))
 
-qpop' :: Queue a -> (Maybe a, Queue a)
-qpop' ([], [])      = (Nothing, ([], []))
-qpop' (ins, [])     = qpop ([], reverse ins)
-qpop' (ins, x:outs) = (Just x, (ins, outs))
+qpop' :: Queue a -> Maybe (a, Queue a)
+qpop' ([], [])      = Nothing
+qpop' (ins, [])     = qpop' ([], reverse ins)
+qpop' (ins, x:outs) = Just (x, (ins, outs))
 
 qpeek :: Queue a -> Maybe a
 qpeek ([], [])  = Nothing
@@ -147,7 +147,7 @@ dsingleton' x = (x :)
 dcons :: a -> DList a -> DList a
 dcons x dl = \xs -> x : (dl xs)
 
-dcons' = (x : ) . dl
+dcons' x dl = (x : ) . dl
 
 dappend :: DList a -> DList a -> DList a
 dappend dl1 dl2 = \xs -> dl1 (dl2 xs)
